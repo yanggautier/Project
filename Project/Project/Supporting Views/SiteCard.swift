@@ -14,11 +14,12 @@ struct SiteCard: View {
     images: ["simplon", "total"],
     coordinates: Coordinates(latitude:-116.166868 , longitude:34.011286),
     name: "Simplon",
-    state: "France",
-    category: Category,
+    country: "France",
+    city: "Paris",
+    category: SiteCategory.Monument,
+    adresse:" ferbfjhergbehrgerbhj",
     isFavorite: true,
-    isFeatured: true
-    )
+    isFeatured: true)
     var body: some View {
         
         Image(site.images[0])
@@ -30,6 +31,7 @@ struct SiteCard: View {
 }
 
 struct TextOverlay: View {
+    
     var site: Site
     
     var gradient: LinearGradient {
@@ -47,7 +49,7 @@ struct TextOverlay: View {
                 Text(site.name)
                     .font(.title)
                     .bold()
-                //Text(site.park)
+                Text(site.city)
             }
             .padding()
         }
@@ -60,5 +62,4 @@ struct SiteCard_Previews: PreviewProvider {
         SiteCard(site: site)
     }
 }
-
 */

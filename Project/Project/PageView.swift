@@ -4,8 +4,7 @@
 //
 //  Created by Guole YANG on 29/01/2020.
 //  Copyright © 2020 Guole YANG. All rights reserved.
-//
-
+/*
 import SwiftUI
 
 struct PageView<Page: View>: View {
@@ -31,3 +30,4 @@ struct PageView_Preview: PreviewProvider {
             .aspectRatio(3/2, contentMode: .fit)
     }
 }
+*/

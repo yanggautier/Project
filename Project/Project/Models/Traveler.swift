@@ -13,6 +13,7 @@ struct Traveler {
     var firstName: String
     var lastName: String
     var location: String
+    var email: String
     var interets: [Interet]
     
 }

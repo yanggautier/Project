@@ -6,11 +6,11 @@
 //  Copyright © 2020 Guole YANG. All rights reserved.
 //
 
-/*
+
 import Foundation
 import CoreLocation
 import SwiftUI
-
+/*
 let siteData: [Site] = load("siteData.json")
 let features = siteData.filter { $0.isFeatured }
 //let hikeData: [Hike] = load("hikeData.json")
@@ -69,6 +69,5 @@ final class ImageStore {
         return images.index(forKey: name)!
     }
 }
-
 
 */

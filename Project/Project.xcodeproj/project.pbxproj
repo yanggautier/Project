@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27065B0B23E2E16600954707 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27065B0A23E2E16600954707 /* ImageCarouselView.swift */; };
+		27065B0D23E2F5F200954707 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27065B0C23E2F5F200954707 /* CommentView.swift */; };
+		27065B0F23E2F7D800954707 /* Traveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27065B0E23E2F7D800954707 /* Traveler.swift */; };
+		27065B1223E3275B00954707 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27065B1123E3275B00954707 /* MapView.swift */; };
+		270AC93B23E4707400221FEA /* SiteAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270AC93A23E4707400221FEA /* SiteAnnotation.swift */; };
+		270AC93D23E4729100221FEA /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270AC93C23E4729100221FEA /* MapListView.swift */; };
 		27E9F63523E1B53300557C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9F63423E1B53300557C42 /* AppDelegate.swift */; };
 		27E9F63723E1B53300557C42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9F63623E1B53300557C42 /* SceneDelegate.swift */; };
 		27E9F63923E1B53300557C42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9F63823E1B53300557C42 /* ContentView.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27065B0A23E2E16600954707 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		27065B0C23E2F5F200954707 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		27065B0E23E2F7D800954707 /* Traveler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Traveler.swift; sourceTree = "<group>"; };
+		27065B1123E3275B00954707 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		270AC93A23E4707400221FEA /* SiteAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteAnnotation.swift; sourceTree = "<group>"; };
+		270AC93C23E4729100221FEA /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		27E9F63123E1B53300557C42 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E9F63423E1B53300557C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27E9F63623E1B53300557C42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +71,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27065B1023E3273400954707 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		27E9F62823E1B53300557C42 = {
 			isa = PBXGroup;
 			children = (
@@ -78,20 +97,22 @@
 		27E9F63323E1B53300557C42 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				27065B1023E3273400954707 /* Entity */,
 				27E9F64D23E1B58A00557C42 /* Supporting Views */,
 				27E9F64A23E1B54C00557C42 /* Profiles */,
 				27E9F64923E1B54600557C42 /* Models */,
 				27E9F64823E1B53E00557C42 /* Resources */,
 				27E9F63423E1B53300557C42 /* AppDelegate.swift */,
+				27E9F63823E1B53300557C42 /* ContentView.swift */,
 				27E9F64E23E1B5B300557C42 /* PageViewController.swift */,
 				27E9F66023E1CC8700557C42 /* PageControl.swift */,
 				27E9F63623E1B53300557C42 /* SceneDelegate.swift */,
 				27E9F65023E1B5EE00557C42 /* PageView.swift */,
 				27E9F65223E1B61B00557C42 /* WithTabView.swift */,
 				27E9F65623E1B65F00557C42 /* DetailView.swift */,
+				27065B0A23E2E16600954707 /* ImageCarouselView.swift */,
 				27E9F65E23E1BC5100557C42 /* SignUpView.swift */,
 				27E9F65423E1B63400557C42 /* NoTabView.swift */,
-				27E9F63823E1B53300557C42 /* ContentView.swift */,
 				27E9F63A23E1B53500557C42 /* Assets.xcassets */,
 				27E9F63F23E1B53500557C42 /* LaunchScreen.storyboard */,
 				27E9F64223E1B53500557C42 /* Info.plist */,
@@ -120,6 +141,11 @@
 			isa = PBXGroup;
 			children = (
 				27E9F65A23E1B7C600557C42 /* Site.swift */,
+				27065B0C23E2F5F200954707 /* CommentView.swift */,
+				270AC93A23E4707400221FEA /* SiteAnnotation.swift */,
+				27065B1123E3275B00954707 /* MapView.swift */,
+				270AC93C23E4729100221FEA /* MapListView.swift */,
+				27065B0E23E2F7D800954707 /* Traveler.swift */,
 				27E9F65C23E1B88400557C42 /* Data.swift */,
 			);
 			path = Models;
@@ -216,14 +242,20 @@
 				27E9F65123E1B5EE00557C42 /* PageView.swift in Sources */,
 				27E9F65923E1B6D200557C42 /* SiteCard.swift in Sources */,
 				27E9F65723E1B65F00557C42 /* DetailView.swift in Sources */,
+				27065B0F23E2F7D800954707 /* Traveler.swift in Sources */,
 				27E9F63523E1B53300557C42 /* AppDelegate.swift in Sources */,
 				27E9F65F23E1BC5100557C42 /* SignUpView.swift in Sources */,
+				270AC93B23E4707400221FEA /* SiteAnnotation.swift in Sources */,
+				270AC93D23E4729100221FEA /* MapListView.swift in Sources */,
 				27E9F65D23E1B88400557C42 /* Data.swift in Sources */,
 				27E9F65323E1B61B00557C42 /* WithTabView.swift in Sources */,
+				27065B1223E3275B00954707 /* MapView.swift in Sources */,
 				27E9F63723E1B53300557C42 /* SceneDelegate.swift in Sources */,
 				27E9F65B23E1B7C600557C42 /* Site.swift in Sources */,
+				27065B0D23E2F5F200954707 /* CommentView.swift in Sources */,
 				27E9F63923E1B53300557C42 /* ContentView.swift in Sources */,
 				27E9F64F23E1B5B300557C42 /* PageViewController.swift in Sources */,
+				27065B0B23E2E16600954707 /* ImageCarouselView.swift in Sources */,
 				27E9F65523E1B63400557C42 /* NoTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

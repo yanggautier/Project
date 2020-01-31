@@ -9,52 +9,90 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 //struct Site: Hashable, Codable, Identifiable {
-struct Site: Identifiable {
+
+class Site: Identifiable/*, MKAnnotation */{
+    
     var id = UUID()
-    var images:[Image]
+    var images:[String]
     var name: String
-    //fileprivate var imageName: String
-    fileprivate var coordinates: Coordinates
-    var state: String
+    var country: String
+    var city: String
     var adresse: String
-    var numbre: Int
-    //var park: String
+    var tarif: Double
+    var tel: String
+    var description: String
     var category: Category
     var isFavorite: Bool
     var isFeatured: Bool
+     //fileprivate
+    var coordinates: Coordinates
+    //var annotation: MKPointAnnotation()
 
+    
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude)
     }
     
-    /*
-     var featureImage: Image? {
-        guard isFeatured else { return nil }
-        
-        return Image(
-            ImageStore.loadImage(name: "\(imageName)_feature"),
-            scale: 2,
-            label: Text(name))
+    init(images:[String],
+         name: String,
+         country: String,
+         city: String,
+         adresse: String,
+         tarif: Double,
+         tel: String,
+         description: String,
+         category: Category,
+         isFavorite: Bool,
+         isFeatured: Bool,
+         coordinates: Coordinates){
+        self.images = images
+        self.name = name
+        self.country = country
+        self.city = city
+        self.adresse = adresse
+        self.tarif = tarif
+        self.tel = tel
+        self.description = description
+        self.category = category
+        self.isFavorite = isFavorite
+        self.isFeatured = isFeatured
+        self.coordinates = coordinates
     }
-     */
-
+    
     enum Category: String, CaseIterable, Codable, Hashable {
         case store = "Magasin"
         case restaurant = "Restaurant"
         case monument = "Monument"
         case sight = "Paysage"
+        
     }
+    /*
+     var featureImage: Image? {
+     guard isFeatured else { return nil }
+     
+     return Image(
+     ImageStore.loadImage(name: "\(imageName)_feature"),
+     scale: 2,
+     label: Text(name))
+     }
+     */
+    
+    static let `default` = Site(images: ["simplon","total"], name: "Simplon", country: "France", city: "Montrueil", adresse: "55 Rue des Vincennes", tarif: 0, tel: "0140509878", description: "Centre de formation", category: Site.Category.sight, isFavorite: true, isFeatured: false, coordinates: Coordinates(latitude: 34.011286, longitude: -116.166868))
+    
 }
+
+
 /*
-extension Site {
-    var image: Image {
-        ImageStore.shared.image(name: imageName)
-    }
-}
-*/
+ extension Site {
+ var image: Image {
+ ImageStore.shared.image(name: imageName)
+ }
+ }
+ */
 
 struct Coordinates: Hashable, Codable {
     var latitude: Double
