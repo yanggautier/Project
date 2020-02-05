@@ -13,9 +13,6 @@ import CoreLocation
 
 struct MapListView: UIViewRepresentable {
     
-//    @Binding var centerCoordinate: CLLocationCoordinate2D
-//    @Binding var selectedPlace: MKPointAnnotation?
-//    @Binding var showingPlaceDetails: Bool
     @Binding var sites:[Site]
     
     var annotations: [MKPointAnnotation]
