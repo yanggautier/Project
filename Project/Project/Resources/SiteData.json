@@ -1,18 +1,212 @@
+
 [
     {
-        "name": "Simplon",
-        "category": "Monument",
-        "city": "Twentynine Palms",
-        "state": "California",
-        "id": 1001,
-        "isFeatured": true,
-        "isFavorite": true,
-        "park": "Joshua Tree National Park",
+        "images": ["big ben"],
+        "name": "Big Ben",
+        "country": "Angleterre",
+        "city": "Londres",
+        "adresse": "Westminster, London SW1A 0AA, Royaume Uni",
+        "tarif": 0,
+        "tel": "00442072194272",
+        "desc": "Big Ben est le surnom de la grande cloche de 13,5 tonnes se trouvant au sommet de la tour Élisabeth (Elizabeth Tower), la tour horloge du Palais de Westminster, qui est le siège du parlement britannique (Houses of Parliament), à Londres. La tour a été renommée à l'occasion du jubilé de diamant d'Élisabeth II en 2012. Auparavant, elle était simplement appelée tour de l'Horloge (Clock Tower). Par métonymie, le nom de la cloche est aussi communément employé pour désigner l'horloge dans son ensemble et la tour qui abrite le tout. Il s'agit d'un symbole de la ville de Londres.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates":{
+            "latitude": 51.500870,
+            "longitude":  -0.124576 }
+    },
+ {
+        "images": ["London eye"],
+        "name": "London Eye",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Westminster Bridge Road London SE1 7PB England",
+        "tarif": 0,
+        "tel": "00448709908883",
+        "desc": "Le London Eye (« L'œil de Londres »), également surnommé Millennium Wheel (ou « Roue du millénaire »), est une grande roue mise en place à Londres pour les festivités de l'an 2000, au même moment que le Dôme du millénaire de Greenwich. Elle est l'une des attractions touristiques d'Europe à avoir été distinguée par un Thea Award, décerné par la Themed Entertainment Association.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
         "coordinates": {
-            "longitude": -116.166868,
-            "latitude": 34.011286
-        },
-        "imageName": "turtlerock"
-    }
-]
+            "latitude": 51.503429,
+            "longitude":  -0.119534 }
+    },
+{
+        "images": [ "tour de londres" ],
+        "name": "Tour de Londres",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "London EC3N 4AB England",
+        "tarif": 0,
+        "tel": "00442031666000",
+        "desc": "La tour de Londres (en anglais Tower of London)nb 1 est une forteresse historique située sur la rive nord de la Tamise à Londres en Angleterre à côté du Tower Bridge. La tour se trouve dans le district londonien de Tower Hamlets situé  l'est de la Cité de Londres dans un espace appelé Tower Hill.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.508213,
+            "longitude":  -0.075870 }
+    },
+{
+        "images": ["tower bridge" ],
+        "name": "Tower Brige",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Tower Bridge Rd London SE1 2UP England",
+        "tarif": 0,
+        "tel": "00442074033761",
+        "desc": "Le Tower Bridge (en français : « pont de la Tour ») est un pont basculant britannique, situé à Londres et permettant notamment le passage de la Tamise aux véhicules motorisés. Il appartient à la classe des ponts suspendus et est composé de granite pour sa façade, d'acier pour sa structure et de béton pour ses fondations.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.505621,
+            "longitude":  -0.075318 }
+    },
+{
+        "images": [ "buckingham" ],
+        "name": "Palais de Buckingham",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "London SW1A 1AA England",
+        "tarif": 0,
+        "tel": "00442079304832",
+        "desc": "Le palais de Buckingham (en anglais : Buckingham Palace) est la résidence officielle des souverains britanniques. Situé à Londres, le palais est à la fois le lieu où se produisent les événements en relation avec la famille royale, le lieu d'accueil de beaucoup de chefs d'État en visite, et une attraction touristique importante.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.501622,
+            "longitude":  -0.142083 }
+    },
+{
+        "images": [ "british museum", "british museum1", "british museum2" ],
+        "name": " The British Museum",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Great Russell Street London WC1B 3DG England",
+        "tarif": 0,
+        "tel": "00442073238299",
+        "desc": "La Queen Elizabeth II Great Court (« Grande cour Élisabeth II »), anciennement simplement Great Court, est la cour centrale du British Museum à Londres.",
+        "category": "Musée",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.519592,
+            "longitude":  -0.126989 }
+    },
+{
+        "images": ["hyde park", "hyde park2", "hyde park3"],
+        "name": " The Hyde Park",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Hyde Park Serpentine Road London W2 2UH England",
+        "tarif": 0,
+        "tel": "00443000612000",
+        "desc": "Hyde Park est un grand parc classé dans le centre de Londres. C'est le plus grand des quatre parcs royaux qui forment une chaîne depuis l'entrée du palais de Kensington en passant par les jardins de Kensington et Hyde Park, via Hyde Park Corner et Green Park après l'entrée principale de Buckingham Palace. Le parc est divisé par les lacs Serpentine et Long Water.",
+        "category": "Parc",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.507728,
+            "longitude":  -0.165780 }
+    },
+{
+        "images": [ "st paul", "st paul2", "st paul3", "st paul4" ],
+        "name": "Cathédrale Saint Paul",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "The Chapter House St Paul's Churchyard London EC4M 8AD England",
+        "tarif": 0,
+        "tel": "00442072468350",
+        "desc": "La cathédrale Saint-Paul de Londres est la cathédrale du diocèse de Londres de l'Église d'Angleterre. Elle a été construite après la destruction de l'ancien édifice lors du grand incendie de Londres de 1666. Elle couronne Ludgate Hill, site qui accueillit quatre sanctuaires avant la cathédrale actuelle et se trouve dans la Cité de Londres, cœur historique de la ville devenu aujourd’hui le principal quartier d'affaires londonien. Elle est considérée comme étant le chef-d'œuvre de l'architecte britannique Christopher Wren.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.513993,
+            "longitude":  -0.098318 }
+    },
+{
+        "images": [ "westminster", "westminster2", "westminster3" ],
+        "name": "Abbaye de Westminster",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "20 Dean's Yard London SW1P 3PA England",
+        "tarif": 0,
+        "tel": "00442072225152",
+        "desc": "L’abbaye de Westminster est l'un des édifices religieux les plus célèbres de Londres. Sa construction date pour l'essentiel du xiiie siècle, sous Henri III. C'est le lieu de sépulture d'une partie des rois et reines d'Angleterre et aussi des hommes et des femmes célèbres. Le Coin des poètes fait honneur aux écrivains du royaume. La quasi-totalité des couronnements des monarques anglais a eu lieu dans cette abbaye.",
+        "category": "Lieu historique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.499586,
+            "longitude":  -0.127297 }
+    },
+{
+        "images": [ "trafalgar", "trafalgar2" ],
+        "name": "Trafalgar Square",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Trafalgar Square London WC2N England",
+        "tarif": 0,
+        "tel": "",
+        "desc": "Trafalgar Square est une place très célèbre de Westminster à Londres en Angleterre. Le lieu est bien connu pour être un espace social et de liberté d'expression.",
+        "category": "Place publique",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.508119,
+            "longitude":  -0.128067 }
+    },
+{
+        "images": [ "national gallery", "national gallery2" ],
+        "name": "National Gallery",
+        "country": "Royaume Uni",
+        "city": "Londres",
+        "adresse": "Trafalgar Square London WC2N 5DN England",
+        "tarif": 0,
+        "tel": "00442077472885",
+        "desc": "La National Gallery (ou, en français, la Galerie nationale), fondée en 1824, est un musée situé à Londres et occupant le nord de Trafalgar Square depuis 1838. Elle détient un patrimoine artistique composé principalement de peintures datant de 1250 à 1900, les œuvres plus récentes étant abritées à la Tate Modern. La collection de 2 300 peintures appartient à l'État britannique et l'accès à la collection principale est gratuit. Seules les expositions temporaires sont soumises à un prix d'entrée. La Gallery est un « organisme public non ministériel » rattaché au Département de la Culture, des Médias et du Sport britannique.",
+        "category": "Musée",
+        "isFavorite": false,
+        "isFeatured": false,
+        "coordinates": {
+            "latitude": 51.509363,
+            "longitude":  -0.128453 }
+    },
+{
+    "images": [ "tour eiffel", "tour eiffel2" ],
+    "name": "Tour Eiffel",
+    "country": "France",
+    "city": "Paris",
+    "adresse": "Champ de Mars, 5 Avenue Anatole France",
+    "tarif": 0,
+    "tel": "00442077472885",
+    "desc": " La tour Eiffel est une tour de fer puddlé de 324 mètres de hauteur située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7ᵉ arrondissement. Son adresse officielle est 5, avenue Anatole-France",
+    "category": "Musée",
+    "isFavorite": false,
+    "isFeatured": false,
+    "coordinates": {
+        "latitude": 48.85638427734375,
+        "longitude":  2.2895889282226562}
+},
 
+{
+    "images": ["simplon"],
+    "name": "Simplon",
+    "country": "France",
+    "city": "Montreuil",
+    "adresse": "55 rue de vincennes",
+    "tarif": 0,
+    "tel": "00442077472885",
+    "desc": "Centre de formation pour développeur web, développeur mobile, chef de projet, designer UX, designer UI",
+    "category": "Lieu historique",
+    "isFavorite": false,
+    "isFeatured": false,
+    "coordinates": {
+        "latitude": 48.855628967285156,
+        "longitude":  2.436622381210327 }
+}
+]

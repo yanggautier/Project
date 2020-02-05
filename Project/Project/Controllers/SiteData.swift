@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct BoxData {
+struct SiteData {
     
-    static let sites: [Site] = load("siteData.json")
+    static let sites: [Site] = load("SiteData.json")
 
     static func load<T:Decodable>(_ filename: String, as type: T.Type = T.self) -> T {
         let data: Data

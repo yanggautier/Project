@@ -1,5 +1,5 @@
 //
-//  ContentView2.swift
+//  FavoriteView.swift
 //  Project
 //
 //  Created by Guole YANG on 03/02/2020.
@@ -10,8 +10,8 @@
 
 import SwiftUI
 
+
 struct FavoriteView: View {
-    
     @State var favorite: CategoryType = .interets
     
     var body: some View {

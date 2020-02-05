@@ -1,9 +1,9 @@
 //
-//  PageViewController.swift
-//  Project
+//  CategoryRow.swift
+//  FavoriteView
 //
-//  Created by Guole YANG on 29/01/2020.
-//  Copyright © 2020 Guole YANG. All rights reserved.
+//  Created by brakni amine on 30/01/2020.
+//  Copyright © 2020 brakni amine. All rights reserved.
 //
 
 

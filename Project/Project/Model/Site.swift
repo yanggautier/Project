@@ -17,13 +17,13 @@ class Site: NSObject, Identifiable, MKAnnotation, Codable{
     var id = UUID()
     var images:[String]
     var name: String
-    var country: String
-    var city: String
+    var country: Country
+    var city: City
     var adresse: String
     var tarif: Double
     var tel: String
     var desc: String
-    var category: Category
+    var category: CategorySite
     var isFavorite: Bool
     var isFeatured: Bool
      //fileprivate
@@ -58,13 +58,13 @@ class Site: NSObject, Identifiable, MKAnnotation, Codable{
     init(
         images:[String],
          name: String,
-         country: String,
-         city: String,
+         country: Country,
+         city: City,
          adresse: String,
          tarif: Double,
          tel: String,
          desc: String,
-         category: Category,
+         category: CategorySite,
          isFavorite: Bool,
          isFeatured: Bool,
          coordinates: Coordinates){
@@ -82,15 +82,21 @@ class Site: NSObject, Identifiable, MKAnnotation, Codable{
         self.coordinates = coordinates
     }
     
-    enum Category: String, CaseIterable, Codable, Hashable {
-        case store      = "Magasin"
-        case restaurant = "Restaurant"
-        case monument   = "Monument"
-        case sight      = "Paysage"
-        
+    enum CategorySite: String, Codable, Hashable, CaseIterable{
+        case lieuHistorique = "Lieu historique"
+        case musee          = "Musée"
+        case parc           = "Parc"
+        case placePublic    = "Place publique"
+        //case cinema         = "Cinéma"
+        //case histoire       = "Histoire"
+        //case croisiere      = "Croisière"
+        //case sport          = "Sport"
+        //case musique        = "Music"
+        //case banquet        = "Banquet"
+        //case home           = "Home"
     }
 
-    static let `default` = Site(images: ["simplon","total"], name: "Simplon", country: "France", city: "Montrueil", adresse: "55 Rue des Vincennes\n 933000 Montueil", tarif: 0, tel: "0140509878", desc: "Centre de formation", category: Site.Category.sight, isFavorite: true, isFeatured: false, coordinates: Coordinates(latitude: 48.8544945, longitude: 2.4337783))
+    static let `default` = Site(images: ["simplon","total"], name: "Simplon", country: .france, city: .montreuil, adresse: "55 Rue des Vincennes\n 933000 Montreuil", tarif: 0, tel: "0140509878", desc: "Centre de formation", category: Site.CategorySite.parc, isFavorite: true, isFeatured: false, coordinates: Coordinates(latitude: 48.8544945, longitude: 2.4337783))
 }
 
 struct Coordinates: Hashable, Codable {
@@ -98,17 +104,17 @@ struct Coordinates: Hashable, Codable {
     var longitude: Double
 }
 //
-//enum City: String, Codable {
-//    case londres   = "Londres"
-//    case paris     = "Paris"
-//    case montrueil = "Montrueil"
-//}
+enum City: String, Codable, CaseIterable {
+   case londres   = "Londres"
+   case paris     = "Paris"
+   case montreuil = "Montreuil"
+}
 //
-//enum Country: String, Codable {
-//    case angleterre = "Angleterre"
-//    case royaumeUni = "Royaume Uni"
-//    case france = "France"
-//}
+enum Country: String, Codable, CaseIterable  {
+    case angleterre = "Angleterre"
+    case royaumeUni = "Royaume Uni"
+   case france = "France"
+}
 
 typealias Empty = [Site]
 

@@ -8,14 +8,31 @@
 
 import SwiftUI
 
+
 struct CategoryRow: View {
+    
+    var choixSegmented: String
+    
+    var choixSegmentedInteret: [SiteViewModel] {
+        return SiteData.sites.map { (site) -> SiteViewModel in
+            return SiteViewModel(site: site)
+        }
+    }
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            if choixSegmented == "Interets" {
+                ListCategoryView()
+            }else{
+                ListPlaceView()
+            }
+        }
     }
 }
 
+
 struct CategoryRow_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryRow()
+        CategoryRow(choixSegmented: "Interets")
     }
 }

@@ -11,61 +11,75 @@ import MapKit
 
 struct DetailView: View {
     
-    @State private var locations = [MKPointAnnotation]()
-    
+    //@State private var locations = [MKPointAnnotation]()
+    //@State private var selectedPlace: Site?
+    @State private var showPlaceDetails = false
     var site: Site
     
     var body: some View {
         
-        ScrollView {
-            
-            
-            VStack{
-
-                ScrollView(.horizontal){
-                    HStack {
-                        ForEach(site.images, id: \.self) {
-                            image in
-                            Image(image)
-                                .resizable()
-                                .aspectRatio(3 / 2, contentMode: .fit)
-                        }
-    
-                    }
-                }.frame(height:300)
-                //
-                
-                
-                HStack(spacing: 80){
-                    VStack(alignment: .leading,spacing: 5){
-                        Text("Nom:")
-                        Text("Horaire:")
-                        Text("Tarif:")
-                        Text("Adresse:")
-                        Text("")
-                        Text("Description:")
-                    }
+        NavigationView{
+            ScrollView {
+                VStack(spacing: 40){
                     
-                    VStack(alignment: .leading, spacing: 5){
-                        Text(site.name)
-                        Text("9h30 à 17h30")
-                        Text("0€")
-                        Text(site.adresse)
-                        
-                        Text(site.desc)
+                    ScrollView(.horizontal){
+                        HStack {
+                            ForEach(site.images, id: \.self) {
+                                image in
+                                Image(image)
+                                    .resizable()
+                                    .aspectRatio(3 / 2, contentMode: .fit)
+                            }
+                            
+                        }
+                    }.frame(height:300)
+                    //
+                    
+                    //Divider()
+                    HStack(spacing: 80){
+                        VStack(alignment: .leading,spacing: 20){
+                            
+                            HStack(alignment: .top){
+                                Text("Nom:")
+                                Spacer()
+                                Text(site.name)
+                            }
+                            HStack(alignment: .top){
+                                Text("Horaire:")
+                                Spacer()
+                                Text("9h30 à 17h30")
+                            }
+                            HStack(alignment: .top){
+                                Text("Horaire:")
+                                Spacer()
+                                Text("0€")
+                            }
+                            HStack(alignment: .top){
+                                Text("Adresse:")
+                                Spacer()
+                                Text(site.adresse)
+                            }
+                            HStack(alignment: .top){
+                                Text("Description:")
+                                Spacer()
+                                Text(site.desc)
+                            }
+                        }
                     }
                 }.padding()
                 
+              
                 
-                MapView(sites: [(site)])
-                    .frame(height: 250)
+                MapPointView(sites: [(site)],centre: site.coordinates)
+                 .frame(height: 250)
                 
-//                site.annotation.title = site.title
-//                site.annotation.subtitle = site.subtitle
-//                site.annotation.coordinate = site.coordinate
-//                
-//                locations.append(site.annotation)
                 
+                //                site.annotation.title = site.title
+                //                site.annotation.subtitle = site.subtitle
+                //                site.annotation.coordinate = site.coordinate
+                //
+                //                locations.append(site.annotation)
+               
                 
                 VStack(alignment: .leading){
                     
@@ -96,52 +110,27 @@ struct DetailView: View {
                                 }
                             }
                             
-                            Text("Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.").font(.caption)
+                            Text("L’aventure de Simplon débute en 2013 avec Frédéric Bardeau, Andrei Vladescu-Olt et Erwan Kezzar. Inspirés par les premiers bootcamps qui fleurissent un peu partout dans la Silicon Valley, ils rêvent d’une version française plus inclusive et gratuite avec plus de femmes, et plus de recrues de milieux et de territoires différents. ").font(.caption)
                         }
                         
                     }
                     
-                }.padding()
+                }.padding().navigationBarTitle(Text(site.name), displayMode: .inline)
+                }
                 
             }
             
         }
-    }
     
 }
+
 
 struct DetailView_Previews: PreviewProvider {
     
     static var previews: some View {
         DetailView(site: Site.default)
-        
     }
 }
 
 
-
-/*struct MapView: UIViewRepresentable {
- 
- var coord : Coordinates
- 
- func makeUIView(context: Context) -> MKMapView {
- MKMapView(frame: .zero)
- }
- 
- func updateUIView(_ view: MKMapView, context: Context) {
- let coordinate = CLLocationCoordinate2D(
- latitude: coord.latitude, longitude: coord.longitude)
- let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
- let region = MKCoordinateRegion(center: coordinate, span: span)
- view.setRegion(region, animated: true)
- }
- }*/
-
-/*
- struct MapView_Preview: PreviewProvider {
- static var previews: some View {
- MapView()
- }
- }
- */
 
