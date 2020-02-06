@@ -73,7 +73,6 @@ struct MapView: UIViewRepresentable {
             
             if annotationView == nil{
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                annotationView?.image = image
                 annotationView?.canShowCallout = true
                 annotationView?.image = UIImage(named: "locationPin")
                 let button = UIButton(type: .detailDisclosure)

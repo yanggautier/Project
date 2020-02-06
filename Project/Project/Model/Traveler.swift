@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Traveler.swift
 //  Project
 //
 //  Created by Guole YANG on 30/01/2020.
@@ -9,11 +9,15 @@
 import Foundation
 
 struct Traveler {
-    
+    var civilite: Civilite
     var firstName: String
     var lastName: String
-    var location: String
+    var naissance: String
     var email: String
+    var adress: String
+    var city: String
+    var postal: Int
+    var tel: String
     var interets: [Interet]
     
 }
@@ -24,4 +28,10 @@ enum Interet{
     case sport
     case eat
     case shop
+}
+
+
+enum Civilite {
+    case homme
+    case femme
 }

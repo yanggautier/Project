@@ -13,6 +13,7 @@ struct CritereView: View {
     // @State var user: Traveler
     @Binding var showCritereView: Bool
     @Binding var centre:Coordinates
+    @Binding var showButton: Bool
     
     @State var isOn = true
     @State var isOff = false
@@ -29,6 +30,9 @@ struct CritereView: View {
     @State private var  Music = true
     @State private var  Culture = true
     @State private var  Autre = true
+    
+    @State var bduree = true
+    @State private var duree: Double = 0
     let array = ["Paris","Londre", "Madrid"]
     @State private var searchText = ""
     //var interet = ["Restaurant": false, "Sport":  true,"Musé": false,"Music": true,"Culture": false,"Autre": true]
@@ -40,11 +44,9 @@ struct CritereView: View {
         NavigationView{
             
             ScrollView{
-              
                 ZStack{
-        
                     VStack {
-                         HStack(alignment: .center, spacing: 31.0) {
+                        HStack(alignment: .center, spacing: 31.0) {
                             Toggle("", isOn: $isOff1)
                                 .toggleStyle(
                                     ColoredToggleStyle(label:"Localité",onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
@@ -52,12 +54,9 @@ struct CritereView: View {
                                 .padding(.vertical,13)
                                 .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray,lineWidth: 1))
                                 .padding(.horizontal,10)
-                            
                         }
                         
                         if self.isOff1 == true {
-                            
-                            
                             HStack {
                                 TextField("Saisir un lieu",text:$searchText)
                                     .font(.headline)
@@ -80,11 +79,10 @@ struct CritereView: View {
                                 .padding(.vertical,13)
                                 .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray,lineWidth: 1))
                                 .padding(.horizontal,10)
-                 
+                            
                         }
                         if self.isOff == true {
                             VStack {
-                                
                                 Slider(value: $sliderVal, in: 100...1000, step: 100)
                                     .padding(.all, 18.0)
                                     .lineSpacing(0)
@@ -95,9 +93,8 @@ struct CritereView: View {
                                     .padding(1)
                             }
                         }
-                   
+                        
                         HStack  {
-                            
                             Toggle("", isOn: $isOn)
                                 .toggleStyle(
                                     ColoredToggleStyle(label:"Centre d'interêts",onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
@@ -105,17 +102,11 @@ struct CritereView: View {
                                 .padding(.vertical,13)
                                 .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray,lineWidth: 1))
                                 .padding(.horizontal,10)
-                            
                         }
-            
+                        
                         ForEach(0..<interet.count) {
-                            
-                            
                             if self.isOn == true {
-                                
-                                if self.interet[$0] == "Restaurant"
-                                    
-                                {
+                                if self.interet[$0] == "Restaurant"{
                                     Toggle("test", isOn: self.$Restaurant)
                                         .toggleStyle(ColoredToggleStyle(label: self.interet[$0],onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                         .font(.headline)
@@ -123,9 +114,7 @@ struct CritereView: View {
                                         .frame(width: 391.0)
                                 }
                                 
-                                if self.interet[$0] == "Musé"
-                                    
-                                {
+                                if self.interet[$0] == "Musé"{
                                     Toggle("test", isOn: self.$Muse)
                                         .toggleStyle(ColoredToggleStyle(label: self.interet[$0],onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                         .font(.headline)
@@ -134,9 +123,7 @@ struct CritereView: View {
                                         .frame(width: 391.0)
                                 }
                                 
-                                if self.interet[$0] == "Sport"
-                                    
-                                {
+                                if self.interet[$0] == "Sport"{
                                     Toggle("test", isOn: self.$Sport)
                                         .toggleStyle(ColoredToggleStyle(label: self.interet[$0],onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                         .font(.headline)
@@ -147,10 +134,7 @@ struct CritereView: View {
                         } .padding(-10)
                         ForEach(0..<interet.count) {
                             if self.isOn == true {
-                                
-                                if self.interet[$0] == "Culture"
-                                    
-                                {
+                                if self.interet[$0] == "Culture"{
                                     Toggle("test", isOn: self.$Culture)
                                         .toggleStyle(ColoredToggleStyle(label: self.interet[$0],onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                         .font(.headline)
@@ -159,22 +143,18 @@ struct CritereView: View {
                                         .frame(width: 391.0)
                                 }
                                 
-                                if self.interet[$0] == "Autre"
-                                    
-                                {
+                                if self.interet[$0] == "Autre"{
                                     Toggle("test", isOn: self.$Autre)
                                         .toggleStyle(ColoredToggleStyle(label: self.interet[$0],onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                         .font(.headline)
                                         .padding(.horizontal,30)
                                         .foregroundColor(Color.gray)
-                                    .frame(width: 391.0)
+                                        .frame(width: 391.0)
                                 }
                             }
-                            
                         } .padding(-10)
-                        VStack   {
+                        VStack  {
                             HStack  {
-                                
                                 Toggle("", isOn: $isOff2)
                                     .toggleStyle(ColoredToggleStyle(label:"Rythme",onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
                                     .font(.system(size: 14))
@@ -183,8 +163,7 @@ struct CritereView: View {
                                     .padding(.horizontal,10)
                             }
                             
-                            if self.isOff2 == true
-                            {
+                            if self.isOff2 == true {
                                 VStack {
                                     Slider(value: $rythme, in: 100...1000, step: 100)
                                         .padding(0)
@@ -192,29 +171,55 @@ struct CritereView: View {
                                         .fontWeight(.light)
                                         .foregroundColor(Color.gray)
                                         .padding(0)
-                                    
-                                    
                                 }
                                 .padding()
-                                
+                            }
+                        }
+                        
+                        VStack  {
+                            HStack  {
+                                Toggle("", isOn: $bduree)
+                                    .toggleStyle(ColoredToggleStyle(label:"Durée",onColor: .green,offColor: .gray,thumbColor: Color(UIColor.white)))
+                                    .font(.system(size: 14))
+                                    .padding(.vertical,13)
+                                    .background(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray,lineWidth: 1))
+                                    .padding(.horizontal,10)
                             }
                             
-
-                            Button(action: {
-                                self.showCritereView = false
-                                self.centre = Coordinates(latitude: 51.5073219, longitude: -0.1276474)
-                              
-                            }) {
-                                Text("Validez")
-                                    .font(.body)
-                                    .foregroundColor(Color.white)              .multilineTextAlignment(.center)                     .padding(.horizontal, 80.0)                     .padding(.vertical, 15)                     .background(Color.green)
-                                    .cornerRadius(15)
+                            if self.bduree == true {
+                                VStack {
+                                    Slider(value: $duree, in: 1...100, step: 1)
+                                        .padding(0)
+                                    Text("Durée de \(Int(duree)) Jours")
+                                        .fontWeight(.light)
+                                        .foregroundColor(Color.gray)
+                                        .padding(0)
+                                }
+                                .padding()
                             }
+                        }
+                        
+                        Button(action: {
+                            self.showCritereView = false
+                            self.centre = Coordinates(latitude: 51.5073219, longitude: -0.1276474)
+                            self.showButton = true
+                            
+                        }) {
+                            Text("Validez")
+                                .font(.body)
+                                .foregroundColor(Color.white)              .multilineTextAlignment(.center)                     .padding(.horizontal, 80.0)                     .padding(.vertical, 15)                     .background(Color.green)
+                                .cornerRadius(15)
                         }
                     }
                 }
                 .padding(0.0)
-            }.navigationBarTitle("Critères", displayMode: .inline)
+            }.navigationBarTitle("Critères", displayMode: .inline)   .navigationBarItems(
+                trailing: Button(action:{
+                    self.showCritereView = false
+                }){
+                    Text("Annuler")
+                }
+            )
         }
     }
 }

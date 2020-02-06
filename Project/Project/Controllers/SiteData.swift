@@ -1,9 +1,9 @@
 //
-//  CategoryRow.swift
-//  FavoriteView
+//  SiteData.swift
+//  Project
 //
-//  Created by brakni amine on 30/01/2020.
-//  Copyright © 2020 brakni amine. All rights reserved.
+//  Created by Guole YANG on 30/01/2020.
+//  Copyright © 2020 Guole YANG. All rights reserved.
 //
 
 import Foundation

@@ -13,38 +13,55 @@ struct MapUIView: View {
     
     @State private var showCritereView = false
     @State var centre: Coordinates
-    @State private var selectedPlace: Site?
+    @State private var selectedPlace: Site? = nil
     @State private var showingPlaceDetails = false
+    @State private var showButton = false
     
     var body: some View {
         NavigationView{
-        ZStack{
-            MapView(selectedPlace: $selectedPlace,showingPlaceDetails: $showingPlaceDetails, sites: SiteData.sites, centre: self.centre)
+            ZStack{
+                MapView(selectedPlace: $selectedPlace,showingPlaceDetails: $showingPlaceDetails, sites: SiteData.sites, centre: self.centre)
+                
+                if showButton{
+                    NavigationLink(destination: DiscoverView()){
+                        //Image(systemName: "trash") .font(.title)
+                        Text("Proposition")
+                            .fontWeight(.semibold)
+                            .font(.headline)
+                            .padding(10)
+                            .foregroundColor(.white)
+                            .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .cornerRadius(15)
+                        
+                    }.offset(x:0,y:250)
+                }
+                
+                //.frame(minWidth: 0, maxWidth: .infinity)
+                if selectedPlace != nil {
+                    NavigationLink(destination: DetailView(
+                        site: selectedPlace!),isActive:self.$showingPlaceDetails
+                    ) {
+                        EmptyView()
+                    }
+                }
+            }
+            .navigationBarItems(
+                trailing: Button(action:{
+                    self.showCritereView.toggle()
+                }){
+                    Text("Mon voyage")
+                }
+                
+            ).edgesIgnoringSafeArea(.all)
+                
+                
+                .sheet(isPresented: $showCritereView) {
+                    CritereView(showCritereView: self.$showCritereView,centre: self.$centre,
+                                showButton: self.$showButton)
+            }//.navigationBarTitle("Map")
             
-        }   .navigationBarItems(
-                 trailing: Button(action:{
-                     self.showCritereView.toggle()
-                 }){
-                     Text("Mon voyage")
-                 }
-             )
-        .edgesIgnoringSafeArea(.all)
+        } //
         
-        
-//        .alert(isPresented: $showingPlaceDetails){ Alert(title: Text(selectedPlace?.title ?? "Unknow"), message: Text(selectedPlace?.subtitle ?? "Missing place information"), primaryButton: .default(
-//            //NavigationLink(destination: DetailView(site: site)){
-//            Text("OK")), secondaryButton: .default(Text("Edit")){
-//            }
-//            )
-//        }
-           
-            
-            .sheet(isPresented: $showCritereView) {
-                CritereView(showCritereView: self.$showCritereView,centre: self.$centre)
-        }//.navigationBarTitle("Map")
-     
-    } //
-              
     }
 }
 

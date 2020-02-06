@@ -1,5 +1,5 @@
 //
-//  Comment.swift
+//  CommentView.swift
 //  Project
 //
 //  Created by Guole YANG on 30/01/2020.

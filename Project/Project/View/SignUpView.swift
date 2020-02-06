@@ -17,13 +17,13 @@ struct SignUpView: View {
     var grayBackground: Color = Color.gray.opacity(0.2)
     
     var body: some View {
-        NavigationView{
-            VStack{
+        VStack(spacing:80){
                 Text("Inscription")
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                     .fontWeight(.semibold)
                     .padding(.bottom, 20)
+                VStack{
                 TextField("Username", text: $username)
                     .padding()
                     .background(grayBackground)
@@ -39,9 +39,8 @@ struct SignUpView: View {
                     .background(grayBackground)
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
-                
-                Spacer()
-                
+                }
+      
                 NavigationLink(destination:
                     ProfilView()
                 ){
@@ -54,12 +53,11 @@ struct SignUpView: View {
                         .cornerRadius(15.0)
                 }
                 
-                Spacer()
-                
-                Text("By creating an account, you agree to our Term")
+                //Text("By creating an account, you agree to our Term")
             }.padding()
-        }//.navigationBarTitle(Text("Inscription"), displayMode: .inline)
-    }
+        }
+        //.navigationBarTitle(Text("Inscription"), displayMode: .inline)
+    //}
 }
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

@@ -1,5 +1,5 @@
 //
-//  BoxView.swift
+//  SiteView.swift
 //  Project
 //
 //  Created by Guole YANG on 03/02/2020.
@@ -24,7 +24,7 @@ struct SiteView: View {
                     .cornerRadius(5)
                 Text(siteViewModel.site.name)
             }
-        }).sheet(isPresented: $isPresented) { DetailView(site: self.siteViewModel.site)
+        }).sheet(isPresented: $isPresented) { DetailView(/*showPlaceDetails: .constant(true), */site: self.siteViewModel.site)
         }.buttonStyle(PlainButtonStyle())
     }
 }

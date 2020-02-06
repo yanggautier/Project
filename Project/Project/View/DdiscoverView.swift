@@ -43,7 +43,7 @@ struct DecouvrirView: View {
                     Text("The London Eye à 18H00")
                         .font(.subheadline)
                         .fontWeight(.bold)
-                    Image("London eye-2")
+                    Image("london eye-2")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.all)

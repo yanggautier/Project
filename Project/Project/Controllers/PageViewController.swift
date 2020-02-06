@@ -1,6 +1,6 @@
 //
-//  CategoryRow.swift
-//  FavoriteView
+//  PageViewController.swift
+//  FProject
 //
 //  Created by brakni amine on 30/01/2020.
 //  Copyright © 2020 brakni amine. All rights reserved.

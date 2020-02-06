@@ -1,5 +1,5 @@
 //
-//  MapView.swift
+//  MapPointView.swift
 //  Project
 //
 //  Created by Guole YANG on 30/01/2020.

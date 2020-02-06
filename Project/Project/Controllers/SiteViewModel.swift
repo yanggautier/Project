@@ -1,5 +1,5 @@
 //
-//  BoxViewModel.swift
+//  SiteViewModel.swift
 //  Project
 //
 //  Created by Guole YANG on 03/02/2020.
