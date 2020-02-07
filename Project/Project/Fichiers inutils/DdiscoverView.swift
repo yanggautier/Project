@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct DecouvrirView: View {
+struct DiscoverView: View {
     var body: some View {
         VStack(spacing: 20) {
             ScrollView {
